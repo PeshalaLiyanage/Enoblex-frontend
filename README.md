@@ -1,5 +1,7 @@
 # Enoblex Front-end
 
+## prerequisite
+Node.js
 ## Project setup
 ```
 npm install -g @vue/cli
