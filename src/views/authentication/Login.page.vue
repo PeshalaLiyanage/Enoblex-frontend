@@ -82,22 +82,25 @@ export default {
       }
       e.preventDefault();
       this.$store.commit('dashboard/setLoading', true);
-      this.$store
-        .dispatch('auth/login', {
-          email: this.email,
-          password: this.password,
-        })
-        .then(() => {
-          this.$router.push('/dashboard');
-          this.$store.commit('dashboard/setLoading', false);
-        })
-        .catch(() => {
-          this.$store.commit('dashboard/setNotification', {
-            status: 'error',
-            text: 'Login Failed!',
-          });
-          this.$store.commit('dashboard/setLoading', false);
-        });
+//
+      this.$store.commit('dashboard/setLoading', false);
+      this.$router.push('/dashboard');
+      // this.$store
+      //   .dispatch('auth/login', {
+      //     email: this.email,
+      //     password: this.password,
+      //   })
+      //   .then(() => {
+      //     this.$router.push('/dashboard');
+      //     this.$store.commit('dashboard/setLoading', false);
+      //   })
+      //   .catch(() => {
+      //     this.$store.commit('dashboard/setNotification', {
+      //       status: 'error',
+      //       text: 'Login Failed!',
+      //     });
+      //     this.$store.commit('dashboard/setLoading', false);
+      //   });
     },
   },
 };

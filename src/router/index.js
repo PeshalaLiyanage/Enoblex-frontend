@@ -47,29 +47,29 @@ const router = new VueRouter({
   routes,
 });
 
-router.beforeEach((to, from, next) => {
-  const publicPages = ['/login'];
-  const authRequired = !publicPages.includes(to.path);
-  const user = localStorage.getItem('user');
-  const accessToken = localStorage.getItem('access_token');
+// router.beforeEach((to, from, next) => {
+//   const publicPages = ['/login'];
+//   const authRequired = !publicPages.includes(to.path);
+//   const user = localStorage.getItem('user');
+//   const accessToken = localStorage.getItem('access_token');
 
-  if (to.path === '/login' && accessToken) {
-    return next('/dashboard');
-  }
+//   if (to.path === '/login' && accessToken) {
+//     return next('/dashboard');
+//   }
 
-  if (to.path === from.path) {
-    return null;
-  }
+//   if (to.path === from.path) {
+//     return null;
+//   }
 
-  if (authRequired && !accessToken) {
-    return next('/login');
-  }
+//   if (authRequired && !accessToken) {
+//     return next('/login');
+//   }
 
-  if (!authRequired && accessToken) {
-    return next('/dashboard');
-  }
+//   if (!authRequired && accessToken) {
+//     return next('/dashboard');
+//   }
 
-  return next();
-});
+//   return next();
+// });
 
 export default router;
