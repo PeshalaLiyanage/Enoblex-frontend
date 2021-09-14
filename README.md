@@ -1,4 +1,4 @@
-# doctor-b-web
+# Enoblex Front-end
 
 ## Project setup
 ```
