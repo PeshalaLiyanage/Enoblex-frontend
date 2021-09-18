@@ -82,7 +82,7 @@ export default {
       }
       e.preventDefault();
       this.$store.commit('dashboard/setLoading', true);
-//
+      //
       this.$store.commit('dashboard/setLoading', false);
       this.$router.push('/dashboard');
       this.$store

@@ -1,6 +1,6 @@
 import Vuex from 'vuex';
 import Vue from 'vue';
-import todos from './modules/todos';
+import todos from './todoModule';
 
 // Load Vuex
 Vue.use(Vuex);
