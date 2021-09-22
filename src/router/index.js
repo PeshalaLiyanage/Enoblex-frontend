@@ -27,6 +27,11 @@ const routes = [
         name: 'Page2Page',
         component: () => import('../views/Page2.page'),
       },
+      {
+        path: '*',
+        name: 'NotFound',
+        component: () => import('../views/NotFound.page'),
+      },
     ],
   },
 ];
@@ -37,7 +42,6 @@ const router = new VueRouter({
   routes,
 });
 
-// TODO - uncomment this
 router.beforeEach((to, from, next) => {
   const publicPages = ['/login'];
   const authRequired = !publicPages.includes(to.path);
